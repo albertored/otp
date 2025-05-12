@@ -1453,7 +1453,6 @@ send_request({{TPid, _Caps} = TC, App}
              Caller,
              SvcName) ->
     Pkt = make_prepare_packet(Mask, Msg0),
-    io:format("========== send_request - make_prepare_packet: ~p~n", [Pkt]),
 
     case prepare(cb(App, prepare_request, [Pkt, SvcName, TC]), []) of
         [Msg | Fs] ->
