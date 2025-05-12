@@ -547,7 +547,6 @@ decode(_, Mod, AppMod, Opts, #diameter_packet{header = Hdr} = Pkt) ->
                       Mod:msg_name(CmdCode, IsRequest)
               end,
 
-    io:format("========== diameter_codec:decode: ~p ~p ~p ~p ~p~n", [MsgName, Mod, AppMod, Opts, Pkt]),
     decode_avps(MsgName, Mod, AppMod, Opts, Pkt);
 
 decode(Id, Mod, AppMod, Opts, Bin)

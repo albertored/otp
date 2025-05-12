@@ -1673,7 +1673,6 @@ handle_answer(SvcName,
     DecPkt = errors(Id, diameter_codec:decode({MsgDict, AppDict},
                                               SvcOpts,
                                               Pkt)),
-    io:format("========== handle_answer: ~p~n", [DecPkt]),
     #request{peer = {TPid, _}}
         = Req,
 

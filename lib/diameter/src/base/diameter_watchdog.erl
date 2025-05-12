@@ -132,6 +132,7 @@ i({Ack, T, Pid, {Opts,
 
     Dict0 = common_dictionary(Apps),
     SvcOpts = SvcOpts0#{rfc => rfc(Dict0)},
+    io:format("======== init watchdog ~p ~p ~p~n", [Apps, Dict0, SvcOpts]),
     putr(restart, {T, Opts, Svc, SvcOpts}),  %% save seeing it in trace
     putr(dwr, dwr(Caps)),                    %%
     Nodes = restrict_nodes(Restrict),
