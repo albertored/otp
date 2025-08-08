@@ -28,6 +28,7 @@ MODULES = \
 	diameter_util \
 	diameter_3xxx_SUITE \
 	diameter_app_SUITE \
+	diameter_callback_SUITE \
 	diameter_capx_SUITE \
 	diameter_codec_SUITE \
 	diameter_codec_test \
